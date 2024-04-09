@@ -1,6 +1,6 @@
 import java.util.*;
 
-class 배열정렬하기 {
+public class 배열정렬하기 {
 
     private static int[] solution(int arr[]) {
 
