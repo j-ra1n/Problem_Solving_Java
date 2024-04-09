@@ -20,11 +20,11 @@ class 배열정렬하기 {
             numbers[i] = sc.nextInt();
         }
 
-        int sortNumbers[] = solution(numbers);
+        int sortedNumbers[] = solution(numbers);
 
         sc.close();
 
-        System.out.println(Arrays.toString(sortNumbers));
+        System.out.println(Arrays.toString(sortedNumbers));
     }
 
 }
