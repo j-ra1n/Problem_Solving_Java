@@ -24,5 +24,16 @@ class 실패율 {
                 .mapToInt(HashMap.Entry::getKey).toArray();
 
         return answer;
+
+        /*
+         * List<Integer> list = new ArrayList<>(map.keySet());
+         * 실패율을 기준으로 내림차순 정렬
+         * list.sort((o1, o2) -> Double.compare(map.get(o2), map.get(o1)));
+         * 
+         * 리스트를 배열로 변환하여 반환
+         * return list.stream().mapToInt(i -> i).toArray();
+         * 
+         * i -> i = Integer::intValue
+         */
     }
 }
