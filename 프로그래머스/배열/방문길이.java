@@ -2,7 +2,7 @@ import java.util.*;
 
 class 방문길이 {
     static int[] move(char c) {
-        int[] mov = new int[2];
+        int[] mov;
         if (c == 'U') {
             mov = new int[] { 0, 1 };
             return mov;
