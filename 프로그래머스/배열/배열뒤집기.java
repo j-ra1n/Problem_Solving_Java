@@ -13,7 +13,8 @@ class 배열뒤집기 {
 
     /*
      * List<Integer> list = Arrays.stream(numList).boxed().toList();
-     * -> toList()는 16버전부터 지원 -> .collect(Collectors.toList());
+     * -> toList()는 16버전부터 지원
+     * .collect(Collectors.toList()); -> (import java.util.stream.Collectors;) 선언
      * 
      * Collections.reverse(list);
      * return list.stream().mapToInt(Integer::intValue).toArray();
