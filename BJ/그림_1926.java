@@ -3,19 +3,20 @@ import java.util.*;
 
 class 그림_1926 {
 
-    private static Queue<int[]> q = new LinkedList<>();
+    static Queue<int[]> q = new LinkedList<>();
 
-    private static boolean[][] visited;
+    static boolean[][] visited;
 
-    private static int[][] board;
-    private static int n, m;
+    static int[][] board;
+    static int n, m;
 
-    private static int num, size;
+    static int num, size;
 
-    private static int[] dx = { 1, -1, 0, 0 };
-    private static int[] dy = { 0, 0, 1, -1 };
+    static int[] dx = { 1, -1, 0, 0 };
 
-    private static void bfs(int x, int y) {
+    static int[] dy = { 0, 0, 1, -1 };
+
+    static void bfs(int x, int y) {
 
         int nowsize = 0;
         visited[x][y] = true;
