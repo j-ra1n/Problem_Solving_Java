@@ -17,8 +17,11 @@ class Solution {
         
         Collection<Integer> vals = map.values();
         
+        List<Integer> list = new ArrayList<>(vals);
+        
         System.out.println(map);
         System.out.println(vals);
+        System.out.println(list);
         
         for(int val : vals) {
             answer *= val;
