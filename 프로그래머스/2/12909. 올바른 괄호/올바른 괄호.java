@@ -4,7 +4,6 @@ class Solution {
     boolean solution(String s) {
         boolean answer = true;
         
-        Stack<Character> st = new Stack<>();
 
        char[] c = new char[s.length()];
         
@@ -25,14 +24,12 @@ class Solution {
         
             if(c[i]=='(')
             {
-                st.push('(');
                 open++;
                 cnt++;
             }else
             {
                 if(open>0)
                 {
-                    st.push(')');
                     open--;
                     close++;
                 }
