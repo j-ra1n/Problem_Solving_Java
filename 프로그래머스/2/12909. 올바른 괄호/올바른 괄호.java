@@ -1,47 +1,36 @@
 import java.util.*;
 
+
 class Solution {
     boolean solution(String s) {
         boolean answer = true;
         
-
-       char[] c = new char[s.length()];
+        ArrayDeque<Integer> stack = new ArrayDeque<>();
         
+
         for(int i=0; i<s.length(); i++)
         {
-            c[i] = s.charAt(i);
-        }
-        
-        
-        if(c[0]==')')
-        {
-            return false;
-        }
-        
-        int open =0, close=0, cnt=0;
-        for(int i=0; i<c.length; i++)
-        {
-        
-            if(c[i]=='(')
+            char c = s.charAt(i);
+            
+            if(c == ')')
             {
-                open++;
-                cnt++;
-            }else
-            {
-                if(open>0)
+                if(!stack.isEmpty())
                 {
-                    open--;
-                    close++;
+                    stack.pollLast();
+                }else{
+                    return false;
                 }
+                
+            }else{
+                stack.addLast(1);
             }
         }
-        
-        if(cnt==close)
-        {
-            return true;
-        }else
+
+        if(!stack.isEmpty())
         {
             return false;
         }
+
+        return answer;
     }
 }
